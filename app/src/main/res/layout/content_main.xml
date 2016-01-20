@@ -12,8 +12,172 @@
     tools:context="com.ronstruempf.ronstruempfcontacts.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nameEdit"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailEdit"
+        android:layout_below="@+id/nameEdit"
+        android:layout_alignLeft="@+id/nameEdit"
+        android:layout_alignStart="@+id/nameEdit"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phoneEdit"
+        android:layout_below="@+id/emailEdit"
+        android:layout_alignLeft="@+id/emailEdit"
+        android:layout_alignStart="@+id/emailEdit"
+        android:layout_marginTop="15dp" />
+
+    <RadioGroup
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/phoneEdit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cell Phone"
+            android:id="@+id/phoneIsCell" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Land Line"
+            android:id="@+id/phoneIsLandLine" />
+    </RadioGroup>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name"
+        android:id="@+id/label1"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_alignBaseline="@+id/nameEdit"
+        android:layout_alignBottom="@+id/nameEdit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Email"
+        android:id="@+id/label2"
+        android:layout_alignBaseline="@+id/emailEdit"
+        android:layout_alignBottom="@+id/emailEdit"
+        android:layout_alignLeft="@+id/label1"
+        android:layout_alignStart="@+id/label1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Phone"
+        android:id="@+id/label3"
+        android:layout_alignBaseline="@+id/phoneEdit"
+        android:layout_alignLeft="@+id/label2"
+        android:layout_alignStart="@+id/label2"
+        android:layout_alignBottom="@+id/phoneEdit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/saveButton"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="New Contact"
+        android:id="@+id/label0"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Contact View"
+        android:id="@+id/label4"
+        android:layout_below="@+id/saveButton"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/nameView"
+        android:layout_below="@+id/label4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:minWidth="100dp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/emailView"
+        android:layout_marginTop="10dp"
+        android:minWidth="100dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/nameView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/phoneView"
+        android:layout_marginTop="10dp"
+        android:minWidth="100dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/emailView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/phoneTypeView"
+        android:minWidth="100dp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/phoneView"
+        android:layout_alignBaseline="@+id/phoneView" />
+
 </RelativeLayout>
