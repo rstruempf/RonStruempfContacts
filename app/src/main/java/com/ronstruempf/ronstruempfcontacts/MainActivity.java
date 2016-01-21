@@ -1,32 +1,39 @@
 package com.ronstruempf.ronstruempfcontacts;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private static String APP_TAG = "RonStruempfContacts";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //                .setAction("Action", null).show();
-        //    }
-        //});
+        // if Landscape orientation, change config for landscape
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Log.d(APP_TAG, "Screen orientation is Landscape");
+            LinearLayout main = (LinearLayout)findViewById(R.id.content_main);
+            main.setOrientation(LinearLayout.HORIZONTAL);
+            RelativeLayout editor = (RelativeLayout)findViewById(R.id.content_editor);
+            editor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.MATCH_PARENT));
+            RelativeLayout view = (RelativeLayout)findViewById(R.id.content_view);
+            view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.MATCH_PARENT));
+        }
+
         Button saveButton = (Button) findViewById(R.id.saveButton);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
