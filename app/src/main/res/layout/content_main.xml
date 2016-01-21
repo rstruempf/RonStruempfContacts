@@ -24,10 +24,12 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/nameEdit"
-            android:layout_marginTop="37dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/label1"
+            android:layout_alignBaseline="@+id/label1" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -35,10 +37,9 @@
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/emailEdit"
-            android:layout_below="@+id/nameEdit"
             android:layout_alignLeft="@+id/nameEdit"
             android:layout_alignStart="@+id/nameEdit"
-            android:layout_marginTop="15dp" />
+            android:layout_alignBaseline="@+id/label2" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -46,30 +47,34 @@
             android:inputType="phone"
             android:ems="10"
             android:id="@+id/phoneEdit"
-            android:layout_below="@+id/emailEdit"
             android:layout_alignLeft="@+id/emailEdit"
             android:layout_alignStart="@+id/emailEdit"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp"
+            android:layout_alignBaseline="@+id/label3" />
 
         <RadioGroup
             android:layout_width="190dp"
             android:layout_height="70dp"
             android:id="@+id/radioGroup"
-            android:layout_below="@+id/phoneEdit"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
+            android:layout_alignEnd="@+id/phoneEdit"
+            android:layout_toRightOf="@+id/phoneEdit"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="180dp"
+            android:layout_alignStart="@+id/phoneEdit">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cell Phone"
-                android:id="@+id/phoneIsCell" />
+                android:id="@+id/phoneIsCell"
+                android:layout_marginLeft="20dp" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Land Line"
-                android:id="@+id/phoneIsLandLine" />
+                android:id="@+id/phoneIsLandLine"
+                android:layout_marginLeft="20dp" />
         </RadioGroup>
 
         <TextView
@@ -78,12 +83,13 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Name"
             android:id="@+id/label1"
-            android:layout_marginLeft="26dp"
-            android:layout_marginStart="26dp"
-            android:layout_alignBaseline="@+id/nameEdit"
-            android:layout_alignBottom="@+id/nameEdit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:minWidth="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,10 +97,11 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Email"
             android:id="@+id/label2"
-            android:layout_alignBaseline="@+id/emailEdit"
-            android:layout_alignBottom="@+id/emailEdit"
             android:layout_alignLeft="@+id/label1"
-            android:layout_alignStart="@+id/label1" />
+            android:layout_alignStart="@+id/label1"
+            android:minWidth="100dp"
+            android:layout_below="@+id/label1"
+            android:layout_marginTop="30dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -102,17 +109,17 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Phone"
             android:id="@+id/label3"
-            android:layout_alignBaseline="@+id/phoneEdit"
             android:layout_alignLeft="@+id/label2"
             android:layout_alignStart="@+id/label2"
-            android:layout_alignBottom="@+id/phoneEdit" />
+            android:layout_below="@+id/label2"
+            android:layout_marginTop="30dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
             android:id="@+id/saveButton"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/radioGroup"
             android:layout_centerHorizontal="true" />
 
@@ -136,10 +143,11 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Contact View"
             android:id="@+id/label4"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
