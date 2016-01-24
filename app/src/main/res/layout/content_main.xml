@@ -119,9 +119,10 @@
             android:layout_height="wrap_content"
             android:text="Save"
             android:id="@+id/saveButton"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/radioGroup"
-            android:layout_centerHorizontal="true" />
+            android:layout_marginTop="90dp"
+            android:layout_below="@+id/label3"
+            android:layout_alignLeft="@+id/label3"
+            android:layout_marginLeft="90dp" />
 
         <TextView
             android:layout_width="wrap_content"

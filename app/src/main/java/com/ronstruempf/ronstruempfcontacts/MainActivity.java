@@ -26,12 +26,18 @@ public class MainActivity extends AppCompatActivity {
         // if Landscape orientation, change config for landscape
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             Log.d(APP_TAG, "Screen orientation is Landscape");
+            // change main layout from vertical (profile) to horizontal (landscape)
             LinearLayout main = (LinearLayout)findViewById(R.id.content_main);
             main.setOrientation(LinearLayout.HORIZONTAL);
+            // swap the height and width settings for the interior relative layouts
             RelativeLayout editor = (RelativeLayout)findViewById(R.id.content_editor);
             editor.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.MATCH_PARENT));
             RelativeLayout view = (RelativeLayout)findViewById(R.id.content_view);
             view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.MATCH_PARENT));
+            // move button where we can see it
+            Button saveButton = (Button) findViewById(R.id.saveButton);
+            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)saveButton.getLayoutParams();
+            layoutParams.setMargins(0, 50, 0, 0);  // left, top, right, bottom
         }
 
         Button saveButton = (Button) findViewById(R.id.saveButton);
